@@ -31,8 +31,7 @@ Users should be able to:
 ![](./design/screenshot.PNG)
 
 ### Links
-
-
+site live: https://davidands.github.io/order-summary-component-main-by-david-andriason/
 
 ## My process
 
