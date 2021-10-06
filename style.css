@@ -1,0 +1,207 @@
+/* Default */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --primary-pale-blue: hsl(225, 100%, 94%);
+    --primary-bright-blue: hsl(245, 75%, 52%);
+    --primary-bright-blue-hover: hsla(245, 75%, 52%, 0.564);
+
+    --neutral-pale-blue: hsl(225, 100%, 98%);
+    --neutral-des-blue: hsl(224, 23%, 55%);
+    --neutral-dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.container {
+    background-image: url('./images/pattern-background-mobile.svg'), linear-gradient(var(--primary-pale-blue), var(--primary-pale-blue));
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding: 20px 0;
+}
+
+/* payement-card */
+.payment-card {
+    width: 90%;
+    max-width: 500px;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* img */
+.payment-card__img {
+    width: 100%;
+}
+
+/* body */
+
+.payment-card__title {
+    color: var(--neutral-dark-blue);
+    font-weight: 900;
+    font-size: 1.625rem;
+    margin-top: 1.5rem;
+}
+
+.payment-card__text {
+    color: var(--neutral-des-blue);
+    font-size: 1rem;
+    line-height: 1.5em;
+    width: 85%;
+    margin: 1.5rem auto 0;
+}
+
+/* formula */
+.formula {
+    display: flex;
+    align-items: center;
+    background-color: var(--neutral-pale-blue);
+    width: 85%;
+    margin: 1rem auto 0;
+    padding: 15px 10px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px 0px hsla(0, 0%, 20%, 0.102);
+}
+.formula__info {
+    margin-right: auto;
+    margin-left: 15px;
+}
+
+.formula__logo {
+    width: 60px;
+}
+
+.formula__name {
+    font-size: 1rem;
+    font-weight: 900;
+    color: var(--neutral-dark-blue);
+    margin-bottom: 4px;
+}
+.formula__price {
+    color: var(--neutral-des-blue);
+    font-size: 1rem;
+}
+.formula__change-btn {
+    font-weight: 900;
+    cursor: pointer;
+    transition: all .2s;
+}
+.formula__change-btn:hover {
+    text-decoration: none;
+    color: var(--primary-bright-blue-hover);
+}
+
+/* button */
+.payment-card__btn {
+    display: inline-block;
+    border: none;
+    width: 85%;
+    cursor: pointer;
+    padding: 15px 0;
+    border-radius: 5px;
+    font-weight: 800;
+    font-size: 1rem;
+    background-color: var(--primary-bright-blue);
+    color: var(--neutral-pale-blue);
+    margin-top: 2rem;
+    box-shadow: 0px 15px 20px 10px hsla(234, 79%, 45%, 0.19);
+    transition: all .2s;
+}
+.payment-card__btn:hover {
+    background-color: var(--primary-bright-blue-hover);
+}
+
+/* cancel-btn */
+.payment-card__cancel-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--neutral-des-blue);
+    font-weight: 900;
+    font-size: 1rem;
+    margin: 2rem auto;
+    transition: all .2s;
+}
+.payment-card__cancel-btn:hover {
+    color: var(--neutral-dark-blue);
+}
+
+/* attribution */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    display: block;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.attribution a {
+color: hsl(228, 45%, 44%); 
+}
+
+/* Media queries*/
+@media screen and (min-width: 400px) {
+    .payment-card__title {
+        font-size: 1.8rem;
+    }
+
+    .payment-card__text,
+    .payment-card__btn,
+    .formula__price,
+    .formula__name,
+    .formula__change-btn,
+    .payment-card__cancel-btn {
+        font-size: 1.1rem;
+    }
+
+    .formula {
+        padding: 15px 20px;
+    }
+    
+}
+
+@media screen and (min-width: 550px) {
+    .container {
+        background-image: url('./images/pattern-background-desktop.svg'), linear-gradient(var(--primary-pale-blue), var(--primary-pale-blue));
+        
+    }
+    .payment-card__title {
+        font-size: 2rem;
+    }
+
+    .payment-card__text,
+    .payment-card__btn,
+    .formula__price,
+    .formula__name,
+    .formula__change-btn,
+    .payment-card__cancel-btn {
+        font-size: 1.2rem;
+    }
+    
+}
+
+
+@media screen and (max-width: 370px) {
+    .payment-card__text,
+    .payment-card__btn,
+    .formula__price,
+    .formula__name,
+    .formula__change-btn,
+    .payment-card__cancel-btn {
+        font-size: .9rem;
+    }
+    
+}
